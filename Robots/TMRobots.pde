@@ -34,4 +34,6 @@ class TMRobots {
     //arial = createFont("arial.ttf", int(32 * vertScale)); // set arial equal to arial.ttf from data and set size correctly
     //textFont(arial); // set the text font to arial
 
-    //text("( ͡° ͜ʖ ͡°)", posX + 100 * vertScale, posY + 100 * horizScale); // type "le lenny" on the robot's torso
+
+  }
+}
