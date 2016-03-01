@@ -8,28 +8,52 @@ void draw() {
   //clearing the background 
   background(100);
   if (scene==1);
+  
   //place nemo
   int nemox= 400;
   int nemoy= 300; 
   MCRobot nemobot = new MCRobot();
   nemobot.drawAt(nemox, nemoy, 1.0, 1.0); 
+ 
   //speach bubble
   fill(255);
   noStroke();
-  ellipse(nemox + 300, nemoy + 75, 150, 75);
+  ellipse(nemox + 300, nemoy + 100, 150, 75);
   //text show up
   fill(0);
   textAlign(CENTER);
   textSize(16);
-  text(You are the best dad ever, nemo +300, nemoy +75);
+  text("You are the best dad ever", nemox +300, nemoy +75);
+ 
   //place nemo dad
   int nemodadx= 100;
   int nemodady= 300;
   BDRobot nemodadbot =new BDRobot();
   nemodadbot.drawAt(nemodadx, nemodady, 0.5, 0.5);
+ 
   //draw below text
   fill(0);
   textSize(32);
   textAlign(CENTER);
   text("Nemo is happy with his dad.", width/2, height - 25);
+
+//scene 2
+  int scene =2;
+  if (scene==2);
+  
+  //place shark 
+  int sharkx= 400;
+  int sharky= 300;
+  DDRobot sharkbot = new DDRobot();
+  sharkbot.drawAt(sharkx, sharky, 1.0, 1.0); 
+
+  //place nemo
+  nemobot.drawAt(nemox, nemoy, 0.5, 0.5);
+  
+  //draw text below
+  fill(0);
+ textSize(32);
+ textAlign(CENTER);
+ text("Nemo gets seperated from his dad by a shark!", width/2, height - 25);
+ 
 }
