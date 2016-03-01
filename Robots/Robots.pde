@@ -70,12 +70,10 @@ void draw() {
   int nemofriendy= 300;
   EPRobot nemofriendbot =new EPRobot ();
   nemofriendbot.drawAt(nemofriendx, nemofriendy, 1.5, 1.5);
-  
+
   //place text
   fill(0);
   textSize(32);
   textAlign(CENTER);
   text("Nemo gets back togethar with his dad and friend.", width/2, height - 25);
-  
-   
 }
