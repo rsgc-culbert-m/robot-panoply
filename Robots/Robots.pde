@@ -1,5 +1,6 @@
 int scene =1; 
 void setup() {
+  MCRobot nemobot = new MCRobot();
   //make canvas
   size(1000, 700);
 }
@@ -12,7 +13,6 @@ void draw() {
     //place nemo
     int nemox= 400;
     int nemoy= 300; 
-    MCRobot nemobot = new MCRobot();
     nemobot.drawAt(nemox, nemoy, 1.0, 1.0); 
 
     //speach bubble
