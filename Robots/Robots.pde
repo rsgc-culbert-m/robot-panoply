@@ -1,18 +1,28 @@
 int scene =1; 
 void setup() {
-  MCRobot nemobot = new MCRobot();
+
   //make canvas
   size(1000, 700);
 }
-
-void draw() {
-  //clearing the background 
+//save frames
+void draw() { 
+  if (frameCount % 180==0) {
+    scene +=1;
+  }
   background(100);
   if (scene==1) {
+    textAlign(CENTER);
+    textSize(16);
+    text("Finding Nemo", 300, 300 );
+  }
+  //clearing the background 
+  background(100);
+  if (scene==2) {
 
     //place nemo
     int nemox= 400;
     int nemoy= 300; 
+    MCRobot nemobot = new MCRobot();
     nemobot.drawAt(nemox, nemoy, 1.0, 1.0); 
 
     //speach bubble
@@ -39,7 +49,7 @@ void draw() {
   }
   //scene 2
 
-  else if (scene==2) {
+  else if (scene==3) {
 
     //place shark 
     int sharkx= 400;
@@ -48,6 +58,9 @@ void draw() {
     sharkbot.drawAt(sharkx, sharky, 1.0, 1.0); 
 
     //place nemo
+    int nemox= 400;
+    int nemoy= 300; 
+    MCRobot nemobot = new MCRobot();
     nemobot.drawAt(nemox, nemoy, 0.5, 0.5);
 
     //draw text below
@@ -57,12 +70,18 @@ void draw() {
     text("Nemo gets seperated from his dad by a shark!", width/2, height - 25);
 
     //scene 3
-  } else if (scene==3) {
+  } else if (scene==4) {
 
     //place nemo dad
+    int nemodadx= 100;
+    int nemodady= 300;
+    BDRobot nemodadbot =new BDRobot();
     nemodadbot.drawAt(nemodadx, nemodady, 1.0, 1.0);
 
     //place nemo
+    int nemox= 400;
+    int nemoy= 300; 
+    MCRobot nemobot = new MCRobot();
     nemobot.drawAt(nemox, nemoy, 0.5, 0.5);
 
     //place nemo friend
@@ -77,3 +96,4 @@ void draw() {
     textAlign(CENTER);
     text("Nemo gets back togethar with his dad and friend.", width/2, height - 25);
   }
+}
