@@ -89,6 +89,8 @@ void draw() {
     fill(0);
     textAlign(CENTER);
     textSize(75);
-    text ("Finding nemo.", 500, 400);
+    text ("Finding nemo", 500, 400);
+    text ("By Matthew Culbert", 500, 500);
+    
   }
 }
